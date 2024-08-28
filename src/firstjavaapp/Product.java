@@ -3,24 +3,26 @@ package firstjavaapp;
 public class Product {
     
     String pname;
-    int pid, stocks;
+    int pid, stocks, sold;
     double price;
     
-    public void addProduct(int id, String name, double prc, int stk){
+    public void addProduct(int id, String name, double prc, int stk, int sld){
         this.pid = id;
         this.pname = name;
         this.price = prc;
         this.stocks = stk;
+        this.sold = sld;
 
     }
     
     public void viewProduct(){
         
-
+        double profit = this.price * this.sold;
         String status = (this.stocks < 1) ? "Out-of-Stock" : "Available";
         double tep = this.price * this.stocks;
         
-        System.out.printf("%-10d %-10s % -10.2f %-10d %-10s %-10.2f\n",
-                this.pid, this.pname, this.price, this.stocks, status, tep);
+        System.out.printf("%-10d %-10s % -10.2f %-10d %-10d %-10.2f %-10.2f %-10s \n",
+                this.pid, this.pname, this.price, this.stocks, this.sold, profit, tep, status);
+
     }
 }
