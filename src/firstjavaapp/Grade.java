@@ -2,7 +2,7 @@ package firstjavaapp;
 
 import java.util.Scanner;
 
-public class grades {
+public class Grade {
     
     public void getGrade(){
     
