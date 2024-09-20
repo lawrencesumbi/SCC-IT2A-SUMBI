@@ -5,28 +5,37 @@ import java.util.Scanner;
 public class Grade {
 
     public void editGrades(Grades[] grs, int id, int size){
-        Scanner sc = new Scanner(System.in);
-      for(int i = 0; i < size; i++){
-          if(id == grs[i].id){
-              System.out.println("Enter NEW grades of student "+grs[i].id+":");
-                System.out.print("Prelim: ");
-                double npr = sc.nextDouble();
-                grs[i].p = npr;
+       Scanner sc = new Scanner(System.in);
+    for(int i = 0; i < size; i++){
+         if(id == grs[i].id){
+             System.out.println("Enter new grades of student "+grs[i].id+":");
+               System.out.print("Prelim: ");
+               double npr = sc.nextDouble();
+               System.out.print("Midterm: ");
+               double mmd = sc.nextDouble();
+               System.out.print("Prefinal: ");
+               double ppf = sc.nextDouble();
+               System.out.print("Final: ");
+               double ffn = sc.nextDouble();
 
-          }
-      }
+               grs[i].p = npr;
+               grs[i].m = mmd;
+               grs[i].pf = ppf;
+               grs[i].f = ffn;
+         }
+    }
 
     }
 
     public void getGrade(){
-     Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Grades[] gr = new Grades[100];
 
         int nums = 0;
         int res;
 
         do{
-        System.out.println("Grades Demo App");
+        System.out.println("GRADE SYSTEM");
         System.out.println("-------------------------------------");
         System.out.println("Actions:");
         System.out.println("1. Add Records");
@@ -73,7 +82,7 @@ public class Grade {
                  }
             break;
             case 3:
-                System.out.println("Enter id to update: ");
+                System.out.print("Enter id to update: ");
                 int ids = sc.nextInt();
                 editGrades(gr, ids, nums);
             break;
@@ -85,5 +94,5 @@ public class Grade {
         }while(res != 0 );
 
     }
-
 }
+

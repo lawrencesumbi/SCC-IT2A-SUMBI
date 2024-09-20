@@ -1,16 +1,40 @@
 package firstjavaapp;
 
+import java.util.Scanner;
+
 public class FirstJavaApp {
 
     public static void main(String[] args) {
-      
-        Grade grd = new Grade();
-        grd.getGrade();
+        Scanner scanner = new Scanner(System.in);
         
-        //Product product = new Product();
-        //product.manageProducts(); 
+        System.out.println("--------------------");
+        System.out.println("CLASSES");
+        System.out.println("1. Grade");
+        System.out.println("2. Product");
+        System.out.println("3. Account");
+        System.out.println("--------------------");
         
-        //Account.main(args);       
-                
-    }  
-}      
+        System.out.print("Choose a Class: ");
+        int choice = scanner.nextInt();
+        
+        switch (choice) {
+            case 1:
+                Grade grd = new Grade();
+                grd.getGrade();
+                break;
+            case 2:
+                Product product = new Product();
+                product.manageProducts(); 
+                break;
+            case 3:
+                Account.main(args); 
+                break;
+            default:
+                System.out.println("Invalid choice");
+                break;
+        }
+            
+    }
+
+}
+

@@ -1,17 +1,16 @@
 package firstjavaapp;
 
 public class Accounts {
-
     String firstname, lastname, email, username, password;
     int pid;
 
     public void addAccounts(int id, String fn, String ln,String eml,String un,String pw){
-    this.pid = id;
-    this.firstname = fn;
-    this.lastname = ln;
-    this.email = eml;
-    this.username = un;
-    this.password = pw;
+        this.pid = id;
+        this.firstname = fn;
+        this.lastname = ln;
+        this.email = eml;
+        this.username = un;
+        this.password = pw;
     }
     
     public void viewAccounts(){
@@ -64,3 +63,4 @@ public class Accounts {
         return true;
     }
 }
+
